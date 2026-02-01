@@ -1,0 +1,504 @@
+body{margin:0;font-family:Inter,Arial,sans-serif;color:#1f2937}
+.navbar{display:flex;justify-content:space-between;padding:1rem 2rem;border-bottom:1px solid #e5e7eb}
+.navbar a{margin-left:1rem;color:#2563eb;text-decoration:none}
+.section{padding:4rem 2rem}
+.section.light{background:#f6f8fb}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+.card{background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.05)}
+.icon{font-size:1.8rem}
+.footer{text-align:center;padding:2rem;color:#6b7280}
+/* About section – institutional background */
+
+
+/* About section – blue institutional gradient */
+#about {
+  background: linear-gradient(
+    135deg,
+    #020f2a 0%,
+    #031b44 40%,
+    #0b3b8c 70%,
+    #0e5fd8 100%
+  );
+  color: #ffffff;
+  position: relative;
+}
+
+/* Improve readability */
+#about h2 {
+  color: #ffffff;
+}
+
+#about p {
+  max-width: 900px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #e5ecf7; /* slightly softer white */
+}
+
+/* About section text styling */
+#about p {
+  text-align: justify;
+  color: #8ecbff;          /* soft sky blue */
+  font-weight: 600;        /* bold but readable */
+  font-size: 20px;
+  line-height: 1.9;
+  max-width: 1500px;
+}
+
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Animated Gradient Background (Dark ↔ Light Contrast*/
+
+.hero {
+  background: linear-gradient(
+    100deg,
+    #e2718c71,
+    #d51744,
+    #d2569a,
+    #420708
+  );
+  background-size: 100% 50%;
+  animation: gradientFlow 12s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255,255,255,0.12),
+    transparent 60%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+.hero {
+  min-height: 60vh;   /* reduced height */
+}
+
+/*
+.logo-shape {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, #3c92e2, #ac2f3d);
+  clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 20% 100%, 0% 35%);
+}*/
+
+.logo-shape {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 1.5rem;
+
+  background-image: url("../assets/EcoNet-Logo2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* remove old shape styling */
+  clip-path: none;
+}
+
+
+/* Company Name — Bold Box  
+.company-box {
+  display: inline-block;
+  padding: 0.8rem 2.2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 2px solid #9fd3ff;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+
+/* Slogan Styling  */
+/*
+.hero-slogan {
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9fd3ff;
+  margin-top: 0.5rem;
+}*/
+
+.hero-slogan {
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d9ece2;   /* dark maroon */
+  margin-top: 0.5rem;
+}
+
+/* Services grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+/* Responsive fallback */
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-size: 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #eef2ff;
+}
+
+
+.communication { background-image: url("https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg"); }
+.events        { background-image: url("https://cdn.jsdelivr.net/npm/lucide-static/icons/mic.svg"); }
+.ecosystem     { background-image: url("https://cdn.jsdelivr.net/npm/lucide-static/icons/globe.svg"); }
+.consulting    { background-image: url("https://cdn.jsdelivr.net/npm/lucide-static/icons/briefcase.svg"); }
+.advisory      { background-image: url("https://cdn.jsdelivr.net/npm/lucide-static/icons/compass.svg"); }
+.training      { background-image: url("https://cdn.jsdelivr.net/npm/lucide-static/icons/graduation-cap.svg"); }
+.people        { background-image: url("https://cdn.jsdelivr.net/npm/lucide-static/icons/users.svg"); }
+.scope         { background-image: url("https://cdn.jsdelivr.net/npm/lucide-static/icons/check-circle.svg"); }
+
+.service-card {
+  padding: 2.2rem 1.6rem;
+  border-radius: 14px;
+  text-align: center;
+  color: #ffffff;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Headings & text */
+.service-card h3 {
+  margin: 1.2rem 0 0.6rem;
+  font-size: 1.1rem;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+
+/* individual color boxes */
+.bg-communication { background: linear-gradient(135deg, #2563eb, #ed74df); }
+.bg-events        { background: linear-gradient(135deg, #7c2d12, #dfbea0); }
+.bg-ecosystem     { background: linear-gradient(135deg, #065f46, #d4678b); }
+.bg-consulting    { background: linear-gradient(135deg, #d36ac8, #072550); }
+
+.bg-advisory      { background: linear-gradient(135deg, #8a51e1, #6ce384); }
+.bg-training      { background: linear-gradient(135deg, #92400e, #74aff2); }
+.bg-people        { background: linear-gradient(135deg, #53a5d4, #198813); }
+.bg-scope         { background: linear-gradient(135deg, #d14154, #3d5096); }
+
+
+/* Hover + Animation Effects */
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+/* Light sweep animation */
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.18),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.service-card:hover::after {
+  transform: translateX(100%);
+}
+/* icon animation on hover*/
+
+.service-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.18);
+  background-size: 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(6deg) scale(1.15);
+}
+
+/* Expandable service card */
+.expandable .service-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.45s ease;
+  margin-top: 0;
+}
+
+/* Reveal on hover */
+.expandable:hover .service-details {
+  max-height: 700px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+
+.service-details p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+
+.service-details ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.service-details li {
+  margin-bottom: 0.3rem;
+}
+
+/* Sub-list indentation */
+.sub-list {
+  padding-left: 1.8rem;
+  opacity: 0.95;
+}
+
+/* Emphasis note */
+.focus-note {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+
+.expandable::before {
+  content: "More details ↓";
+  font-size: 0.75rem;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.expandable:hover::before {
+  content: "Details ↑";
+}
+
+
+.service-card h3 {
+  color: #000000;      /* black heading */
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.service-card p,
+.service-card li {
+  color: #ffffff;      /* white body text */
+}
+
+.service-details ul {
+  padding-left: 1.4rem;     /* clean indentation */
+  margin: 0.6rem 0 0.8rem;
+  list-style-position: outside;
+}
+
+.service-details li {
+  margin-bottom: 0.35rem;
+  line-height: 1.6;
+}
+
+.sub-list {
+  padding-left: 1.8rem;
+  list-style-type: circle;  /* visual hierarchy */
+  opacity: 0.95;
+}
+
+.service-details {
+  text-align: left;         /* avoid justified text in cards */
+}
+
+.service-summary {
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+
+/* =========================
+   Navigation Bar
+========================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #020b1c;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #c7d2fe;
+  font-size: 0.9rem;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+.nav-links a.active {
+  color: #ffffff;
+  font-weight: 600;
+  border-bottom: 2px solid #2563eb;
+}
+
+
+/* Make service cards clickable links */
+.service-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-link:hover {
+  text-decoration: none;
+}
+
+.service-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Page background */
+body {
+  background-color: #cde0fc; /* light neutral grey */
+}
+
+
+main.section {
+  background-color: #ffffff;
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 3rem 3.5rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.service-detail {
+  background-color: #f8fafc; /* very light blue-grey */
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  border-left: 6px solid #2563eb;
+}
+
+
+.service-detail h2 {
+  margin-top: 0;
+  color: #1f2937;
+  font-size: 1.35rem;
+}
+
+main.section h1 {
+  color: #020b1c;
+  margin-bottom: 2rem;
+}
+
+.service-detail ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.service-detail li {
+  margin-bottom: 0.45rem;
+  line-height: 1.7;
+}
+
+
+.important-text {
+  font-size: 1.05rem;   /* ~16.8px */
+  line-height: 1.8;
+}
+
+body {
+  font-family: "Inter", "Arial", sans-serif;
+}
+
+p, li {
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  word-wrap: break-word;
+}
+
+
+
+
+
+
+
